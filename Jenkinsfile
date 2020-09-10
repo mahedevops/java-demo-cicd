@@ -2,7 +2,7 @@ node {
 
 print "****  START: SET  VARIABLES  : START ****"
     def mavenHome   = "${tool 'MVN363'}/bin/mvn"
-    #def branchName  = "${BRANCH_NAME}"
+//    def branchName  = "${BRANCH_NAME}"
     def buildNum    = "${BUILD_NUMBER}"
     def serviceName = "demo-service"
     def imageName   = "demo-api"
