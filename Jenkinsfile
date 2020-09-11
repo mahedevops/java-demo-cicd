@@ -22,13 +22,13 @@ print "****  END: SCM  CHECKOUT  : END ****"
       sh "${mavenHome}  package"    
      
   stage 'BUILD DOCKER IMAGE'
-      sh "sudo docker build -t ${imageName}  ."
+      sh "docker build -t ${imageName}  ."
 
     stage 'TAG/PUSH IMAGE'
 
-    sh "sudo docker tag ${imageName} ${dockerRepo}/${imageName}"
-	sh "sudo docker login -u mahedevops -p Mahesh@143"
-    sh "sudo docker push ${dockerRepo}/${imageName}"
+    sh "docker tag ${imageName} ${dockerRepo}/${imageName}"
+	sh "docker login -u mahedevops -p Mahesh@143"
+    sh "docker push ${dockerRepo}/${imageName}"
 
   //stage 'DEPLOY TO SWARM'
 
